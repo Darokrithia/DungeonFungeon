@@ -1,0 +1,11 @@
+body{
+	background-color: #551100;
+}
+
+div.contentDiv{
+	background-color: #998800;
+	width: 90vw;
+	height: 90vh;
+	margin: auto;
+	border-radius: 20px;
+}
