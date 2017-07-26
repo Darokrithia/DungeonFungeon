@@ -3,4 +3,4 @@ This hopefully will become a procedurally generated semi-text based dungeon craw
 
 # Credits
 Art: Vincent J
-Code: Daniel T
+Code: Daniel Tabin
