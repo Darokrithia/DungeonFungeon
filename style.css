@@ -1,9 +1,9 @@
 body{
-	background-color: #551100;
+	background-color: #000022;
 }
 
 div#contentDiv{
-	background-color: #998800;
+	background-color: #222266;
 	width: 90vw;
 	height: 90vh;
 	margin: auto;
@@ -23,6 +23,9 @@ div#textDiv{
 	overflow-y: auto;
 	text-align: center;
 	font-size: 18px;
+}
+div#textDiv p{
+	color:#FFFFFF;
 }
 div.buttonDiv{
 	align-items: center;
