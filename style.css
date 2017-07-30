@@ -2,11 +2,40 @@ body{
 	background-color: #551100;
 }
 
-div.contentDiv{
+div#contentDiv{
 	background-color: #998800;
 	width: 90vw;
 	height: 90vh;
 	margin: auto;
 	border-radius: 20px;
 	padding: 20px;
+}
+div#gameDiv{
+	width: 80vh;
+	height: 90vh;
+	margin: auto;
+}
+div#textDiv{
+	width: 70vh;
+	height: 35vh;
+	margin: auto;
+	overflow-x: wrap;
+	overflow-y: auto;
+	text-align: center;
+	font-size: 18px;
+}
+div.buttonDiv{
+	align-items: center;
+	margin-top: 5vh;
+}
+div.layerDiv{
+	text-align: center;
+	width: 20vh;
+	margin: auto;
+}
+img{
+	margin-left: 10vh;
+	margin-right: 10vh;
+	height: 40vh;
+	width: 60vh;
 }
