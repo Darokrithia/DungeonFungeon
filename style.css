@@ -17,7 +17,7 @@ div#gameDiv{
 }
 div#textDiv{
 	width: 70vh;
-	height: 35vh;
+	height: 30vh;
 	margin: auto;
 	overflow-x: wrap;
 	overflow-y: auto;
@@ -26,6 +26,9 @@ div#textDiv{
 }
 div#textDiv p{
 	color:#FFFFFF;
+}
+div#choice{
+	display: none;
 }
 div.buttonDiv{
 	align-items: center;
@@ -41,4 +44,11 @@ img{
 	margin-right: 10vh;
 	height: 40vh;
 	width: 60vh;
+}
+button{
+	margin: 1px;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 30px;
+	width: 30px;
 }
