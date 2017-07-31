@@ -1,9 +1,8 @@
-function aButtonClick(){
-	document.getElementByID("nav").style.display = "initial";
-	document.getElementByID("choice").style.display = "none";
-}
-
-function northButtonClick(){
-	document.getElementByID("choice").style.display = "initial";
-	document.getElementByID("nav").style.display = "none";
-}
+$( "#northButton" ).click(function() {
+	$( "#choice").css("display", "initial");
+	$( "#nav").css("display", "none");
+});
+$( "#aButton" ).click(function() {
+	$( "#nav").css("display", "initial");
+	$( "#choice").css("display", "none");
+});
