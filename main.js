@@ -6,3 +6,4 @@ $( "#aButton" ).click(function() {
 	$( "#nav").css("display", "initial");
 	$( "#choice").css("display", "none");
 });
+$( "#textBox" ).html(test)
