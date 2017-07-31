@@ -6,4 +6,9 @@ $( "#aButton" ).click(function() {
 	$( "#nav").css("display", "initial");
 	$( "#choice").css("display", "none");
 });
-$( "#textBox" ).html(test)
+
+$( "#textBox" ).html(roomDsc)
+$( "#aOption" ).html(aOptn)
+$( "#bOption" ).html(bOptn)
+$( "#cOption" ).html(cOptn)
+$( "#dOption" ).html(dOptn)

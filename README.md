@@ -5,3 +5,5 @@ This hopefully will become a procedurally generated semi-text based dungeon craw
 Art: Vincent Jedlicka
 
 Code: Daniel Tabin
+
+Storyboarding: Daniel Tabin
