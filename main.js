@@ -43,8 +43,8 @@ var row7 = [0,0,0,0,0,0,0];
 
 var dungeonArray = [row1,row2,row3,row4,row5,row6,row7];
 
-for (int i = 0; i < dungeonArray.length; i++){
-	for (int j = 0; j < row1.length; j++){
+for (var i = 0; i < dungeonArray.length; i++){
+	for (var j = 0; j < row1.length; j++){
 		dungeonArray[i][j] = new Room(i, j, dungeonArray[i][j]);
 	}
 }
