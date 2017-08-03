@@ -1,61 +1,79 @@
-var x;
-var y;
+function loadRoom(){
 
-var roomID;
+	var url = makeRoomString(dungeonArray[x][y]);
+	document.getElementById("room").src = url;
 
-function Room(_x, _y, _ID, _s){
-	this.x = _x;
-	this.y = _y;
-	this.ID = _ID;
-	this.state = _s;
-	this.roomString = makeRoomString(_ID, _s);
+	$( "#textBox" ).html(roomDsc);
+	$( "#aOption" ).html(aOptn);
+	$( "#bOption" ).html(bOptn);
+	$( "#cOption" ).html(cOptn);
+	$( "#dOption" ).html(dOptn);
 }
 
-function makeRoomString(_ID, _s){
-	var str;
+function move(_direction){ // 1 = N, 2 = E, 3 = S, 4 W,
 
-	if (_ID == 1){
-		str = "start"
-	}
-	else{
-		str = ("R" + _ID);
-	}
-
-	str = ("rooms/" + str + "S" + _s + ".js");
-	return str;
-}
-
-var row1 = [0,0,0,0,0,0,0];
-var row2 = [0,0,0,0,5,0,0];
-var row3 = [0,3,0,2,2,0,0];
-var row4 = [0,2,2,2,0,0,0];
-var row5 = [0,4,2,2,2,3,0];
-var row6 = [0,0,0,1,0,0,0];
-var row7 = [0,0,0,0,0,0,0];
-
-var dungeonArray = [row1,row2,row3,row4,row5,row6,row7];
-
-for (var i = 0; i < dungeonArray.length; i++){
-	for (var j = 0; j < row1.length; j++){
-		if(dungeonArray[i][j] == 1){
-			x = i;
-			y = j;
+	if(_direction = 1){
+		if(dungeonArray[x][(y-1)].ID != 0){
+			y--;
 		}
-		dungeonArray[i][j] = new Room(i, j, dungeonArray[i][j], 0);
 	}
+	if(_direction = 2){
+		if(dungeonArray[x][(x+1)].ID != 0){
+			x++;
+		}
+	}
+	if(_direction = 3){
+		if(dungeonArray[x][(y+1)].ID != 0){
+			y++;
+		}
+	}
+	if(_direction = 4){
+		if(dungeonArray[x][(x-1)].ID != 0){
+			x--;
+		}
+	}
+	
+	loadRoom();
+
 }
 
-$( "#northButton" ).click(function() {
-	$( "#choice").css("display", "initial");
-	$( "#nav").css("display", "none");
-});
 $( "#aButton" ).click(function() {
 	$( "#nav").css("display", "initial");
 	$( "#choice").css("display", "none");
 });
+$( "#bButton" ).click(function() {
+	$( "#nav").css("display", "initial");
+	$( "#choice").css("display", "none");
+});
+$( "#cButton" ).click(function() {
+	$( "#nav").css("display", "initial");
+	$( "#choice").css("display", "none");
+});
+$( "#dButton" ).click(function() {
+	$( "#nav").css("display", "initial");
+	$( "#choice").css("display", "none");
+});
 
-$( "#textBox" ).html(roomDsc)
-$( "#aOption" ).html(aOptn)
-$( "#bOption" ).html(bOptn)
-$( "#cOption" ).html(cOptn)
-$( "#dOption" ).html(dOptn)
+
+$( "#northButton" ).click(function() {
+	move(1);
+	$( "#choice").css("display", "initial");
+	$( "#nav").css("display", "none");
+});
+$( "#eastButton" ).click(function() {
+	move(2);
+	$( "#choice").css("display", "initial");
+	$( "#nav").css("display", "none");
+});
+$( "#southButton" ).click(function() {
+	move(3);
+	$( "#choice").css("display", "initial");
+	$( "#nav").css("display", "none");
+});
+$( "#westButton" ).click(function() {
+	move(4);
+	$( "#choice").css("display", "initial");
+	$( "#nav").css("display", "none");
+});
+
+loadRoom();
