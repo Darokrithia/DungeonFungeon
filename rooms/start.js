@@ -2,4 +2,4 @@ var roomDsc = "You awake in a dark and unfamiliar cavern, your head reeling in p
 var aOptn = "Press A to go north then press north to go A";
 var bOptn = "TestB";
 var cOptn = "TestC";
-var dOptn = "TestD";
+var dOptn = dungeonArray[x][y].roomString;

@@ -3,14 +3,6 @@ var y;
 
 var roomID;
 
-function Room(_x, _y, _ID){
-	this.x = _x;
-	this.y = _y;
-	this.ID = _ID;
-	this.state = 0;
-	this.roomString = makeRoomString(_ID, 0);
-}
-
 function Room(_x, _y, _ID, _s){
 	this.x = _x;
 	this.y = _y;
@@ -22,7 +14,7 @@ function Room(_x, _y, _ID, _s){
 function makeRoomString(_ID, _s){
 	var str;
 
-	if (_ID == 0){
+	if (_ID == 1){
 		str = "start"
 	}
 	else{
@@ -45,7 +37,11 @@ var dungeonArray = [row1,row2,row3,row4,row5,row6,row7];
 
 for (var i = 0; i < dungeonArray.length; i++){
 	for (var j = 0; j < row1.length; j++){
-		dungeonArray[i][j] = new Room(i, j, dungeonArray[i][j]);
+		if(dungeonArray[i][j] == 1){
+			x = i;
+			y = j;
+		}
+		dungeonArray[i][j] = new Room(i, j, dungeonArray[i][j], 0);
 	}
 }
 
