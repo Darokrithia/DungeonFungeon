@@ -8,7 +8,7 @@ function Room(_x, _y, _ID, _s){
 	this.y = _y;
 	this.ID = _ID;
 	this.state = _s;
-	this.roomString = makeRoomString(_ID, _s);
+	this.roomString = makeRoomString(this);
 }
 
 function makeRoomString(_ID, _s){
