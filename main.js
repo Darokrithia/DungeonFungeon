@@ -6,11 +6,13 @@ function loadRoom(){
    		alert("Script loaded but not necessarily executed.");
 
 	});
+	$.getScript(url, function(){
+	});
 
 	$( "#textBox" ).html(roomDsc);
 	$( "#aOption" ).html(aOptn);
-	$( "#bOption" ).html(bOptn);
-	$( "#cOption" ).html(cOptn);
+	$( "#bOption" ).html(bOptn + " " + x);
+	$( "#cOption" ).html(cOptn + " " + y);
 	$( "#dOption" ).html(dOptn);
 }
 
