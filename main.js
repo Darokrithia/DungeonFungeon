@@ -1,7 +1,11 @@
 function loadRoom(){
 
-	var url = makeRoomString(dungeonArray[x][y]);
-	document.getElementById("room").src = url;
+	var url = dungeonArray[x][y].roomString;
+	$.getScript(url, function(){
+
+   		alert("Script loaded but not necessarily executed.");
+
+	});
 
 	$( "#textBox" ).html(roomDsc);
 	$( "#aOption" ).html(aOptn);
@@ -12,24 +16,28 @@ function loadRoom(){
 
 function move(_direction){ // 1 = N, 2 = E, 3 = S, 4 W,
 
-	if(_direction = 1){
+	if(_direction == 1){
 		if(dungeonArray[x][(y-1)].ID != 0){
 			y--;
+ 			alert("N");
 		}
 	}
-	if(_direction = 2){
+	if(_direction == 2){
 		if(dungeonArray[x][(x+1)].ID != 0){
 			x++;
+ 			alert("E");
 		}
 	}
-	if(_direction = 3){
+	if(_direction == 3){
 		if(dungeonArray[x][(y+1)].ID != 0){
 			y++;
+ 			alert("S");
 		}
 	}
-	if(_direction = 4){
+	if(_direction == 4){
 		if(dungeonArray[x][(x-1)].ID != 0){
 			x--;
+ 			alert("W");
 		}
 	}
 	

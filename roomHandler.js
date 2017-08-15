@@ -54,7 +54,7 @@ var dungeonArray = [row1,row2,row3,row4,row5,row6,row7];
 
 for (var i = 0; i < dungeonArray.length; i++){
 	for (var j = 0; j < row1.length; j++){
-		if(dungeonArray[i][j] == 1){
+		if(dungeonArray[i][j] == 5){
 			x = i;
 			y = j;
 		}
