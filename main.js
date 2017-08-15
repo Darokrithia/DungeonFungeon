@@ -17,26 +17,26 @@ function loadRoom(){
 function move(_direction){ // 1 = N, 2 = E, 3 = S, 4 W,
 
 	if(_direction == 1){
-		if(dungeonArray[x][(y-1)].ID != 0){
-			y--;
+		if(dungeonArray[(x-1)][y].ID != 0){
+			x--;
  			alert("N");
 		}
 	}
 	if(_direction == 2){
-		if(dungeonArray[x][(x+1)].ID != 0){
-			x++;
+		if(dungeonArray[x][(y+1)].ID != 0){
+			y++;
  			alert("E");
 		}
 	}
 	if(_direction == 3){
-		if(dungeonArray[x][(y+1)].ID != 0){
-			y++;
+		if(dungeonArray[(x-1)][y].ID != 0){
+			x++;
  			alert("S");
 		}
 	}
 	if(_direction == 4){
-		if(dungeonArray[x][(x-1)].ID != 0){
-			x--;
+		if(dungeonArray[x][(y-1)].ID != 0){
+			y--;
  			alert("W");
 		}
 	}
